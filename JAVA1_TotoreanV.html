@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.6.4.1 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		pre { background: transparent }
+		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		pre.cjk { font-family: "NSimSun", monospace; font-size: 10pt }
+		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre class="western">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Calculator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type=&quot;number&quot; id=&quot;num1&quot; placeholder=&quot;Introduceți primul număr&quot;&gt;
+    &lt;input type=&quot;number&quot; id=&quot;num2&quot; placeholder=&quot;Introduceți al doilea număr&quot;&gt;
+    &lt;button onclick=&quot;multiply()&quot;&gt;Înmulțire&lt;/button&gt;
+    &lt;button onclick=&quot;divide()&quot;&gt;Împărțire&lt;/button&gt;
+    &lt;p id=&quot;result&quot;&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+        function multiply() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const result = num1 * num2;
+            document.getElementById('result').innerText = `Rezultatul înmulțirii: ${result}`;
+        }
+
+        function divide() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            if (num2 !== 0) {
+                const result = num1 / num2;
+                document.getElementById('result').innerText = `Rezultatul împărțirii: ${result}`;
+            } else {
+                document.getElementById('result').innerText = &quot;Nu se poate împărți la zero!&quot;;
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
