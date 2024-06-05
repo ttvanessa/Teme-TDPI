@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript current day and time</title>
+<h1>
+          program to create a coutdown timer
+</h1>
+</head>
+<body>
+ 
+<script type="text/javascript">
+ 
+// time to coutdown from (in miliseconds)
+let countDownDate = new Date().getTime() + 24 * 60 * 60 * 1000;
+ 
+// coutdown timer
+let x = setInterval(function() {
+ 
+    // get today's date and time in miliseconds
+    let now = new Date().getTime();
+ 
+    // find the interval between now end the coutdown time
+    let timeleft = coutDownDate - now;
+ 
+    // time calculations for days, hours, minutes and seconds
+    const days = Math.floor( timeLeft/(1000*60*60*24) );
+    const hours = Math.floor( (timeLeft/(1000*60*60)) % 24 );
+    const minutes = Math.floor( (timeLeft/(1000/60) % 60 );
+    const seconds = Math.floor( (timeLeft/1000 % 60 );
+ 
+    // display the result in te element with id="demo"
+    console.log(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+ 
+   // clearing coutdown when complete
+   if (timeLift < 0) {
+       clearInterval (x);
+       console.log('CoutDown Finished');
+   }
+   }, 2000);
+ 
+</script>
+</body>
+</html>
